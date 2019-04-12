@@ -1,0 +1,81 @@
+import redPacket from '../../common/components/red-packet/redPacket.vue'
+export default {
+  name: "page",
+  components:{
+    redPacket
+  },
+  data(){
+    return{
+      redList:[
+        {
+              id:
+                242,
+              limitType:
+                3,
+              orderAmount:
+                20.1,
+              type:
+                1,
+              typeDesc:
+                "认证红包",
+              validDays:
+                2,
+              value:
+                20,
+
+      },
+        {
+              id:
+                242,
+              limitType:
+                3,
+              orderAmount:
+                20.1,
+              type:
+                1,
+              typeDesc:
+                "认证红包",
+              validDays:
+                2,
+              value:
+                20,
+
+      },
+        {
+              id:
+                242,
+              limitType:
+                3,
+              orderAmount:
+                20.1,
+              type:
+                1,
+              typeDesc:
+                "认证红包",
+              validDays:
+                2,
+              value:
+                20,
+
+      },
+        {
+              id:
+                242,
+              limitType:
+                3,
+              orderAmount:
+                20.1,
+              type:
+                1,
+              typeDesc:
+                "认证红包",
+              validDays:
+                2,
+              value:
+                20,
+
+      }
+      ]
+    }
+  }
+}

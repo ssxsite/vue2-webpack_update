@@ -1,0 +1,27 @@
+.counter_box {
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  margin-left: 0.3rem;
+  i {
+    display: inline-block;
+    width: .35rem;
+    height: .35rem;
+    line-height: .35rem;
+    float: left;
+    border: solid 1px #e2e2e2;
+    &.you {
+      float: right;
+    }
+  }
+  input {
+    width: 1rem;
+    height: .35rem;
+    border: solid 1px #e2e2e2;
+    border-left: none;
+    border-right: none;
+    float: left;
+    text-align: center;
+  }
+}
+

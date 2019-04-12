@@ -1,0 +1,134 @@
+@import "iconfont.css";
+
+/*重置*/
+body,h1,h2,h3,h4,h5,dl,dd,dt,p,ul,li,ol{ margin:0; padding:0;}
+input,select,form,textarea,button{ border:none; margin:0;outline:none; padding:0;}
+h1,h2,h3,h4,h5{ font-weight:normal;}
+img{ border:none;}
+a{ text-decoration:none;display: inline-block}
+*{ font: normal 0.22rem/100% Helvetica, Arial, sans-serif;box-sizing: border-box}
+li{ list-style-type:none;}
+html{ width:100%;min-height: 100%; height: 100%;}
+body{background-color: #fff;min-height: 100%; }
+
+/**/
+@media screen and (min-width: 320px) {html{font-size:50px;}}
+@media screen and (min-width: 360px) {html{font-size:56.25px;}}
+@media screen and (min-width: 375px) {html{font-size:58.59375px;}}
+@media screen and (min-width: 400px) {html{font-size:62.5px;}}
+@media screen and (min-width: 414px) {html{font-size:64.6875px;}}
+@media screen and (min-width: 440px) {html{font-size:68.75px;}}
+@media screen and (min-width: 480px) {html{font-size:75px;}}
+@media screen and (min-width: 520px) {html{font-size:81.25px;}}
+@media screen and (min-width: 560px) {html{font-size:87.5px;}}
+@media screen and (min-width: 600px) {html{font-size:93.75px;}}
+@media screen and (min-width: 640px) {html{font-size:100px;}}
+@media screen and (min-width: 680px) {html{font-size:100px;}}
+@media screen and (min-width: 720px) {html{font-size:100px;}}
+@media screen and (min-width: 760px) {html{font-size:100px;}}
+@media screen and (min-width: 800px) {html{font-size:100px;}}
+@media screen and (min-width: 960px) {html{font-size:100px;}}
+
+
+
+
+/*公共样式*/
+.cs{border: solid 1px #ccc;}
+
+.px22{font-size: .22rem;}
+.px24{font-size: .24rem;}
+.px26{font-size: .26rem;}
+.px32{font-size: .32rem;}
+.px40{font-size: .4rem;}
+
+.color_h{color: #bdbdbd;}
+
+.da_xiao_xianz{
+  width:100%;
+  max-width: 640px;
+  margin:0 auto;
+  background: #fff;
+}
+
+body{
+  font-size: .28rem;
+}
+
+#todoPage{
+    background: #000 url(../img/app_bg.jpg) no-repeat;
+    background-size: cover;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#footer{
+    text-align: center;
+    color: white;
+}
+
+.clear {
+  zoom: 1;
+  overflow: hidden;
+}
+
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.fb{
+  font-weight: bold;
+}
+.flexBox{
+  display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+  display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+//display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;   /* 混合版本语法: IE 10 */
+  flex-wrap:wrap;
+  align-items: center;
+}
+
+.flexBox.start{
+  align-items: flex-start;
+}
+.flexBox.end{
+  align-items: flex-end;
+}
+.flexBox.stretch{
+  align-items: stretch;
+}
+.flex-1{
+  -webkit-flex: 1;        /* Chrome */
+  -ms-flex: 1;             /* IE 10 */
+  flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-flex: 1;     /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+}
+
+/*单行省略号*/
+.sin-ellipsis{
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+/* 多行省略号 */
+.mul-ellipsis{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+
+
+

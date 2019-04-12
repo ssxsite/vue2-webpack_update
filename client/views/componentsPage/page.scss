@@ -1,0 +1,33 @@
+.redPacketPageBox{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #f7f7f7;
+  .redpack-wrap{
+    padding: 0 .2rem;
+  }
+  p{
+    font-size: .24rem;
+  }
+
+  @media (min-width: 700px){
+    .test-700{
+      color: #2dff7a;
+    }
+  }
+  @media (min-width: 800px){
+    .test-800{
+      color: #b3b6ff;
+    }
+  }
+  @media (min-width: 900px){
+    .test-900{
+        color: red;
+    }
+  }
+
+
+}

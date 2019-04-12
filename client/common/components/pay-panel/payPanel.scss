@@ -1,0 +1,181 @@
+@import "../../../assets/styles/common.scss";
+*{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+@mixin input-no-appreance(){
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.bg-size-cover{
+  background-size: cover;
+}
+/* 支付方式 */
+.zhifuWrap{
+  background-color: white;
+  width: 100%;
+  position: relative;
+  .title{
+    height: 1.12rem;
+    line-height: 1.12rem;
+    background-color: white;
+    text-align: center;
+    //margin-bottom: .4rem;
+    span{
+      line-height: 1.12rem;
+    }
+    .confir{
+      top: 0;
+      right:.8rem;
+    }
+    .cancel{
+      top: 0;
+      right: 0rem;
+      width: 1rem;
+    }
+  }
+  .content{
+    padding-bottom: 1.9rem;
+    padding-top: 0;
+    .msg{
+      padding: 0rem 0 .3rem 0;
+      text-align: center;
+    }
+    .zhifu-item{
+      padding: .2rem .3rem;
+      position: relative;
+      .icon{
+        display: inline-block;
+        width: .7rem;
+        height: .7rem;
+        margin-right: .3rem;
+      }
+      .icon.weixin{
+        background: url("./img/xbtimg.png")0 -.92rem  no-repeat;
+        background-size: cover;
+      }
+      .icon.zhifubao{
+        background: url("./img/xbtimg.png")0 -2.32rem  no-repeat;
+        background-size: cover;
+      }
+      .icon.qianbao{
+        background: url("./img/xbtimg.png")0 -1.62rem  no-repeat;
+        background-size: cover;
+      }
+      .right-radio{
+        display: inline-block;
+        width: .46rem;
+        height: .46rem;
+        box-sizing: border-box;
+        background: url("./img/xbtimg.png")0 0  no-repeat;
+        background-size: .7rem 3.02rem;
+        color: #fff;
+      }
+    }
+  }
+  .con-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: $colorBlue;
+    color: white;
+    &.gray{
+      background-color:#E6E6E6
+    }
+  }
+}
+
+/* 各种弹窗 */
+.aLertBox,.inputBox,.confirmBox{
+  position: absolute;
+  display: table;
+  z-index: 5000;
+  width: 80%;
+  max-width: 300px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+  .box-hd{
+    position: relative;
+    &.error{
+      color: #d4121d;
+    }
+  }
+  .box-bottom{
+    position: relative;
+    font-size: $fs16;
+    height: .9rem;
+    line-height: .9rem;
+    &.sure,.sure{
+      color: $colorBlue;
+    }
+    .error{
+      color: #d4121d;
+    }
+    .return-btn,.btn{
+      position: relative;
+      display: block;
+      flex: 1;
+    }
+    .return-btn{
+      color:$colorGrayTwo;
+    }
+  }
+}
+.aLertBox{
+  .box-hd{
+    padding: .7rem .3rem .6rem;
+    font-weight: 400;
+  }
+}
+.inputBox{
+  .box-hd{
+    padding: .3rem;
+    font-weight: 400;
+  }
+  .input-wrap{
+    padding-bottom: .3rem;
+    position: relative;
+    input{
+      width: 80%;
+      height: .76rem;
+      border: 1px solid #dddddd;
+      padding: 4px 5px;
+      @include input-no-appreance();
+      font-size: $fs16;
+    }
+  }
+}
+.confirmBox{
+  .box-hd{
+    padding: .3rem;
+    font-weight: 700;
+    font-size: $fs16;
+  }
+  .con{
+    position: relative;
+    padding:0 .6rem .3rem;
+    line-height: .4rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: $colorGrayTwo;
+    text-align: center;
+  }
+  .no-click-btn{
+    &:active {
+      opacity:1;
+    }
+  }
+
+}

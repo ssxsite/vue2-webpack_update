@@ -1,0 +1,79 @@
+$fs12:.24rem;
+$fs14:.28rem;
+$fs16:.32rem;
+$fs20:.4rem;
+$fs30:.8rem;
+$fs12:.24rem;
+$fs14:.28rem;
+$fs16:.32rem;
+$fs20:.4rem;
+$fs30:.8rem;
+$colorOrange:#FC950C;
+$colorWhite:#FFFFFF;
+$colorBorder:#EBEBEB;
+$colorBlue:#56CFE4;
+$colorBlack:#000000;
+$colorGray:#999999;
+$bgColor:#f1f1f1;
+$colorOrange:#FC950C;
+$colorLightOrange:#fefce3;
+$colorGreen:#23AF88;
+$colorGrayTwo:#666666;
+$colorRed:#FF3C48;
+$colorGrayBg:#f7f7f7;
+
+.po-a{
+  position: absolute;
+}
+.po-r{
+  position: relative;
+}
+
+.f24{
+  font-size: $fs12;
+}
+.f32{
+  font-size: $fs16;
+}
+.f40{
+  font-size: $fs20;
+}
+
+@mixin base-radius($radius:3px){
+  border-radius: $radius;
+  -moz-border-radius:$radius;
+}
+
+.sin-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.mul-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.denglu_k_k{margin: 0.2rem 0rem;}
+.denglu_k{margin: 0.8rem 0.2rem;}
+.denglu_k .denglk{margin: 0.05rem 0; border-bottom: solid 1px #e2e2e2; margin-bottom: 0.6rem;}
+.denglu_k .denglk .mz{height: 0.6rem; display:inline-block;line-height: 0.6rem; color: #6a6a6a;}
+.denglu_k .denglk input{display: inline-block; width: 5rem; font-size: 0.24rem;}
+.denglu_k .denglk_l{margin-bottom: 0.4rem;}
+.denglu_k .denglk_l .mz{text-align:right;height: 0.6rem;width: 1.3rem; display:inline-block;line-height: 0.6rem; color: #6a6a6a;}
+.denglu_k .denglk_l input{ width: 4.3rem;}
+
+div.dk {
+  text-align: center;
+  background: #e10601;
+  margin: 0.5rem 0 0 0;
+  a{
+    color: #fff;
+    line-height: 0.8rem;
+    font-size: 0.26rem;
+  }
+}

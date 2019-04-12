@@ -1,0 +1,135 @@
+@import "../../assets/styles/base.css";
+.cityPage{
+  $bgColor:#00bcd4;
+  $darkTextColor:#333;
+  $headerHeight: .86rem;
+  /*头部*/
+  .header{
+    position: relative;
+    overflow: hidden;
+    height: $headerHeight;
+    line-height: $headerHeight;
+    text-align: center;
+    color: #fff;
+    background: $bgColor;
+    font-size: .32rem;
+    .header-back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: .64rem;
+      text-align: center;
+      font-size: .4rem;
+      color: #fff;
+      height: .86rem;
+      line-height: .86rem;
+    }
+  }
+
+  /*城市提示*/
+  .area{
+    .title{
+      line-height: 0.54rem;
+      background: #eee;
+      padding-left: 0.2rem;
+      color: #666;
+      font-size: 0.26rem;
+    }
+    .border-topbottom{
+      &:before{
+        border-color: #ccc
+      }
+      &:after{
+        border-color: #ccc
+      }
+
+    }
+    .border-bottom{
+      &:before{
+        border-color: #ccc
+      }
+    }
+    .button-list{
+      overflow: hidden;
+      padding: 0.1rem 0.6rem 0.1rem 0.1rem;
+      .button-wrapper{
+        float: left;
+        width: 33.33%;
+        .button{
+          margin: .1rem;
+          padding: .1rem 0;
+          text-align: center;
+          border: .02rem solid #ccc;
+          border-radius: .06rem;
+        }
+      }
+
+    }
+  }
+  /* 左侧字母*/
+  .letter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 1.5rem;
+    right: 0;
+    bottom: 0;
+    width: 0.4rem;
+    .item{
+      line-height: 0.4rem;
+      text-align: center;
+      a{
+        color: #00C7C7;
+        font-size: 16px;
+      }
+    }
+  }
+  /*右侧列表*/
+  .container{
+    width: 98%;
+    .city{
+      width: 100%;
+      overflow: hidden;
+      padding: 0 10px 0 20px;
+      .city-list{
+        width: 100%;
+        .city-letter{
+          font-size: 20px;
+          display: inline-block;
+          padding-top: 15px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #e8ecf1;
+          width: 100%;
+        }
+        p{
+          color: #afafaf;
+          width: 95%;
+          height: 50px;
+          line-height: 50px;
+          border-bottom: 1px solid #e8ecf1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  /*显示点击是哪个字母*/
+  .showLetter{
+    position: fixed;
+    color:#00C7C7;
+    width: 50px;
+    height:50px;
+    top:50%;
+    left: 50%;
+    border-radius: 50%;
+    border: #00C7C7 1px solid;
+    text-align: center;
+  }
+  .showLetter span{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+  }
+}

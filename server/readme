@@ -1,0 +1,2 @@
+//使用experss搭建的模拟后台服务器
+//进入到server服务器路径，nodemon build/auction_server.js 来启动服务器

@@ -1,0 +1,12 @@
+@import "../../../assets/styles/styleOne/index.css";
+@import "../../../assets/styles/styleOne/zy.css";
+@import "../../../assets/styles/common.scss";
+.denglk{
+  position: relative;
+  .errorMsg{
+    position: absolute;
+    bottom: -24px;
+    font-size: .24rem;
+    color: $colorRed;
+  }
+}

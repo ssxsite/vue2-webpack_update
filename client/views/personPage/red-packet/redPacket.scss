@@ -1,0 +1,274 @@
+@import "../../../assets/styles/common.scss";
+.redPacketPage{
+  padding: .2rem;
+  background-color: #f7f7f7;
+  *{
+    box-sizing: border-box;
+  }
+  .redList {
+    z-index: 2;
+    margin-bottom: .2rem;
+    box-sizing: border-box;
+    background-color: white;
+    .top{
+      position: relative;
+      height: 2.1rem;
+      .lt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        //background: linear-gradient(top, #ff616b 0%,#fe4651 100%);
+        background: url("/client/assets/img/personPage/packet_11_7.png") left center no-repeat;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        width: 2.3rem;
+        font-size: .24rem;
+        display: flex;
+        align-items: center;
+        .yenBox {
+          width: 100%;
+          padding-bottom: .05rem;
+          .num {
+            font-size: .66rem;
+          }
+
+        }
+        .border-left{
+          position: absolute;
+          top: 0;
+          left: -.05rem;
+          height: 100%;
+          width: .09rem;
+          background: url("/client/assets/img/personPage/packet_not.png")left top no-repeat;
+          background-size: cover;
+          z-index: 10;
+        }
+      }
+      .rt {
+        margin-left: 2.3rem;
+        background: #fff;
+        padding: .2rem 0rem .2rem 0rem;
+        height: 2.1rem;
+        box-sizing: border-box;
+        .leader {
+          padding-left: .26rem;
+          .leaderTip {
+            display: inline-block;
+            background: $colorOrange;
+            color: white;
+            padding: 0 6px;
+            border-radius: 10px;
+            font-size: .24rem;
+            min-width: .9rem;
+            text-align: center;
+
+          }
+
+        }
+        .time {
+          color: $colorGray;
+          border-bottom: 1px dashed $colorBorder;
+          padding: .25rem 0 .2rem .26rem;
+          font-size: .24rem;
+
+        }
+        .tipBox{
+          color: $colorGray;
+          position: relative;
+          height: .56rem;
+          font-size: .24rem;
+          background-color: white;
+          z-index: 2;
+          .tip,.tip-down {
+            position: relative;
+            width: 100%;
+            padding: .14rem .6rem .2rem .26rem;
+            background-color: white;
+            line-height: .36rem;
+          }
+          .tip{
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+          }
+          .tip-down{
+            overflow: visible;
+            word-wrap: break-word;
+            word-break: break-all;
+            background-color: white;
+          }
+          /* sanjiao */
+          .jiao{
+            position: absolute;
+            display: inline-block;
+            right: .3rem;
+          }
+          .triangle-down{
+            width: 0;
+            height: 0;
+            border-left: .14rem solid transparent;
+            border-right: .14rem solid transparent;
+            border-top: .14rem solid #bbbbbb;
+            top: .22rem;
+          }
+          .triangle-up{
+            width: 0;
+            height: 0;
+            border-left: .14rem solid transparent;
+            border-right: .14rem solid transparent;
+            border-bottom: .14rem solid #bbbbbb;
+            top: .24rem;
+          }
+        }
+
+
+      }
+      .right-radio{
+        display: inline-block;
+        position: absolute;
+        right: .25rem;
+        top: .6rem;
+        z-index: 5;
+        width: .46rem;
+        height: .46rem;
+        box-sizing: border-box;
+        background: url("/client/assets/img/personPage/select_11_4.png")left top no-repeat;
+        color: #fff;
+        background-size: cover;
+      }
+      .right-btn{
+        display: inline-block;
+        position: absolute;
+        right: .25rem;
+        top: .8rem;
+        z-index: 5;
+        box-sizing: border-box;
+        border: 1px solid #FC950C;
+        color: #FC950C;
+        padding: .02rem .2rem;
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        text-align: center;
+      }
+    }
+    .bottom{
+      padding: .16rem .2rem .16rem .26rem;
+      background-color: #f1f1f1;
+      .f-red{
+        color: #d5101d;
+      }
+      .f-right{
+        float: right;
+        padding-right: .4rem;
+        background: url(/client/assets/img/personPage/explain_11_5.png) right center no-repeat;
+        background-size: .3rem .3rem;
+      }
+    }
+    &.mar-bottom{
+      margin-bottom: .2rem;
+    }
+
+  }
+  .redList.type2{
+    .top{
+      .lt{
+        //background: linear-gradient(top, #fea1a7 0%,#fe9096 100%);
+        background: url("/client/assets/img/personPage/packet_not_11_7.png") left center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .blueList {
+    margin-bottom: .2rem;
+    .top{
+      position: relative;
+      z-index: 2;
+      height: 1.5rem;
+      background-color: white;
+      .lt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        //background: linear-gradient(top, #aaeff2 0%,#88d3f9 100%);
+        background: url("/client/assets/img/personPage/freight_not_11_7.png") left center no-repeat;
+        background-size: cover;
+        color: $colorWhite;
+        text-align: center;
+        width: 2.3rem;
+        font-size: .24rem;
+        display: flex;
+        align-items: center;
+        .yenBox {
+          width: 100%;
+          padding-bottom: .05rem;
+          .num {
+            font-size:.66rem;
+          }
+
+        }
+        .border-left{
+          position: absolute;
+          top: 0;
+          left: -.05rem;
+          height: 100%;
+          width: .09rem;
+          background: url("/client/assets/img/personPage/freight_not_11_7.png")left top no-repeat;
+          background-size: cover;
+          z-index: 6;
+          &.checked{
+            background: url("/client/assets/img/personPage/freight_11_7.png")left top no-repeat;
+            background-size: cover;
+          }
+        }
+        &.checked{
+          //background: linear-gradient(top, #56d0e3 0%,#14a7f2 100%);
+          background: url("/client/assets/img/personPage/freight_11_7.png") left center no-repeat;
+          background-size: cover;
+        }
+      }
+      .rt {
+        margin-left: 2.6rem;
+        background: $colorWhite;
+        padding: .3rem;
+        height: 1.5rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        .time {
+          color: $colorGray;
+          font-size: .24rem;
+          padding: .05rem 0;
+        }
+      }
+      .right-radio-wrap{
+        position: absolute;
+        right: .25rem;
+        top: 0;
+        bottom: 0;
+        width: .46rem;
+        z-index: 5;
+        .right-radio{
+          display: inline-block;
+          width: .46rem;
+          height: .46rem;
+          box-sizing: border-box;
+          background: url("/client/assets/img/personPage/select_11_4.png")left top no-repeat;
+          color: #fff;
+          background-size: cover;
+        }
+      }
+    }
+    .bottom{
+      padding: .16rem 0 .16rem .26rem;
+      background-color: #f1f1f1;
+      .f-red{
+        color: #d5101d;
+      }
+    }
+    &:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+}

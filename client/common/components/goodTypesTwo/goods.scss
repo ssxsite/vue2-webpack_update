@@ -1,0 +1,127 @@
+@import "../../../assets/styles/base.css";
+@import "../../../assets/styles/common";
+
+.goodsBox{
+  .list {
+    padding: .2rem 0 .2rem 0;
+    margin-left: .2rem;
+    position: relative;
+    min-height: 2rem;
+    border-bottom: 1px solid #EBEBEB;
+    .lt {
+      position: absolute;
+      width: 2rem;
+      height: auto;
+    }
+    .rt {
+      margin-left: 2.2rem;
+      padding-right: .2rem;
+    }
+    &:nth-last-child(1){
+      border:0 none;
+    }
+  }
+}
+
+.goodsBox2{
+  padding: 0 .1rem .2rem .1rem;
+  .list2{
+    float: left;
+    width: 50%;
+    margin-top: .2rem;
+    padding: 0 .1rem .2rem .1rem;
+    border-bottom: 1px solid #dedede;
+    .top{
+      position: relative;
+    }
+    .bottom{
+      padding-top: .2rem;
+    }
+    &:nth-child(even){
+      border-left: 1px solid #dedede;
+    }
+  }
+}
+
+.goodsBox,.goodsBox2{
+  .lt,.top{
+    .tip {
+      position: absolute;
+      left: .15rem;
+      width: 40px;
+      top: 0;
+      line-height: 0;
+    }
+    .img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .rt,.bottom{
+    .title {
+    }
+    .tipBox {
+      padding-top: .1rem;
+      .tipList {
+        display: inline-block;
+        margin-right: .1rem;
+        padding: 2px 5px;
+        font-size: $fs12;
+        @include base-radius;
+        &.icon0 {
+          color: #FF3C48;
+          border: 1px solid #FF3C48;
+          padding: 1px 4px;
+
+        }
+        &.icon1 {
+          color: #FF3C48;
+          background: #FFD8DB;
+        }
+        &.icon2 {
+          color: #666666;
+          background: #EEEEEE;
+        }
+        &.icon3{
+          background: #F6DFC0;
+          color: #CE8737;
+        }
+      }
+
+    }
+    .priceBox{
+      position: relative;
+      color: $colorOrange;
+      margin-top: .1rem;
+      .num{
+        font-size: .4rem;
+      }
+      .disabledTip{
+        position: absolute;
+        right: 0;
+        top:.06rem;
+        background: #D6D6D6;
+        color: #FCFCFC;
+        @include base-radius(15px);
+        padding: 2px 8px;
+      }
+      .numBox{
+        position: absolute;
+        right: 0;
+        top:.06rem;
+      }
+      .sub{
+        margin-top: 10px;
+        font-size:$fs12;
+        &.sub0{
+          color: #FBC460;
+        }
+        &.sub1{
+          color: #BCBCBC;
+        }
+      }
+
+    }
+  }
+}
+

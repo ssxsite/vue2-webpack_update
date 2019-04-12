@@ -1,0 +1,322 @@
+@import "../../../assets/styles/common.scss";
+@import "../../../assets/styles/responsive-layout.css";//响应式样式
+@import "./add-style/responsive-style.css";
+$colorRed:#FF3C48;
+$colorLightRed:lighten($colorRed,20%);
+
+*{
+  box-sizing: border-box;
+}
+
+.redList {
+  z-index: 2;
+  margin-bottom: .2rem;
+  box-sizing: border-box;
+  background: $colorWhite;
+  @include base-radius(5px);
+  .top{
+    position: relative;
+    .lt {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      color: $colorRed;
+      text-align: center;
+      width: 2.3rem;
+      font-size: $fs12;
+      padding-top: .2rem;
+      .yenBox {
+        width: 100%;
+        height: .8rem;
+        line-height: .8rem;
+        .num {
+          font-size: .66rem;
+        }
+      }
+      .man{
+        padding-top: .1rem;
+      }
+      .border-left{
+        position: absolute;
+        top: 0;
+        left: -.05rem;
+        height: 100%;
+        width: .09rem;
+        background: url("./img/packet_not.png")left top no-repeat;
+        background-size: cover;
+        z-index: 10;
+      }
+    }
+    .rt {
+      position: relative;
+      padding-left: 2.3rem;
+      height: 1.6rem;
+      box-sizing: border-box;
+      padding-top: .2rem;
+      .leader {
+        height: .8rem;
+        line-height: .8rem;
+
+        .leaderTip {
+          display: inline-block;
+          background: $colorLightRed;
+          color: white;
+          padding: 1.5px 5px;
+          @include base-radius(10px);
+          font-size: $fs12;
+          min-width: .9rem;
+          text-align: center;
+          line-height: normal;
+          box-sizing: content-box;
+          vertical-align: middle;
+        }
+      }
+      .time {
+        color: $colorGray;
+        padding-top: .1rem;
+        font-size: $fs12;
+      }
+
+    }
+
+    .roundBox{
+      position: relative;
+      .hr{
+        border-top: 1px dashed #f4D6CB;
+        margin: 0 .2rem;
+        padding-bottom: .05rem;
+      }
+      .roundOne{
+        position: absolute;
+        left: -5px;
+        top:-5px;
+        width: 10px;
+        height: 10px;
+        @include base-radius(50%);
+        background: #F7F7F7;
+        z-index: 1;
+      }
+      .roundTwo{
+        position: absolute;
+        right: -5px;
+        top:-5px;
+        width: 10px;
+        height: 10px;
+        @include base-radius(50%);
+        background: $colorGrayBg;
+        z-index: 1;
+      }
+    }
+    .tipBox{
+      color:#666;
+      position: relative;
+      width: 100%;
+      height: .5rem;
+      font-size: $fs12;
+
+
+      .tip{
+        position: relative;
+        width: 100%;
+        padding: 0 .8rem 0 .26rem;
+        line-height: .5rem;
+        background: #fff;
+      }
+      .tip-down{
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+      .tip-up{
+        word-wrap: break-word;
+        word-break: break-all;
+        z-index: 9;
+      }
+      .tip-up-line{
+        height: 1rem;
+        background-color: transparent;
+      }
+      /* sanjiao */
+      .jiao{
+        position: absolute;
+        display: inline-block;
+        right: .3rem;
+      }
+      .triangle-down{
+        width: 0;
+        height: 0;
+        border-left: .14rem solid transparent;
+        border-right: .14rem solid transparent;
+        border-top: .14rem solid #bbbbbb;
+        top: .22rem;
+      }
+      .triangle-up{
+        width: 0;
+        height: 0;
+        border-left: .14rem solid transparent;
+        border-right: .14rem solid transparent;
+        border-bottom: .14rem solid #bbbbbb;
+        top: .24rem;
+      }
+    }
+    .right-radio{
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top: .85rem;
+      z-index: 5;
+      width: .46rem;
+      height: .46rem;
+      box-sizing: border-box;
+      background: url("./img/select_11_4.png")left top no-repeat;
+      color: #fff;
+      background-size: cover;
+    }
+    .right-btn{
+      display: inline-block;
+      position: absolute;
+      right: 12px;
+      top: .9rem;
+      z-index: 5;
+      box-sizing: content-box;
+      border: 1px solid #FC950C;
+      color: #FC950C;
+      padding: 2.5px 10px;
+      @include base-radius(15px);
+      text-align: center;
+      line-height: .34rem;
+      cursor: pointer;
+      &.red-btn{
+        background-color: $colorRed;
+        border-color: $colorRed;
+        color: white;
+      }
+    }
+  }
+  .bottom{
+    padding: .16rem .2rem .16rem .26rem;
+    background-color: $bgColor;
+    .f-red{
+      color: #d5101d;
+    }
+    .f-right{
+      float: right;
+      padding-right: .4rem;
+      background: url("./img/explain_11_5.png") right center no-repeat;
+      background-size: .3rem .3rem;
+    }
+  }
+  &.mar-bottom{
+    margin-bottom: .2rem;
+  }
+  &.wu{
+    margin-bottom: 0;
+  }
+
+}
+.redList.type2{
+  .top{
+    color: #999;
+    .yenBox{
+      .num{
+        color:#fca4ab;
+      }
+    }
+    .time{
+      color: #BABABA;
+    }
+    .leader{
+      .leaderTip{
+        background: $colorLightRed;
+      }
+    }
+    .tipBox{
+      .tip{
+        color: $colorGray;
+      }
+    }
+    .lt{
+      color:#fca4ab;
+    }
+  }
+  .bottom{
+    background-color:#EEEEEE;
+  }
+}
+.redList.type3{
+  .top{
+    position: relative;
+    color: #cfcfcf;
+    .rt{
+      .leader{
+        .leaderTip{
+          background: #D3D3D3;
+          vertical-align: middle;
+        }
+      }
+      .time{
+        color: #cfcfcf;
+      }
+      .lt{
+        .yenBox{
+          color: #bbb;
+        }
+        .man{
+          color: #cfcfcf;
+        }
+      }
+    }
+    .tipBox{
+      color: #cfcfcf;
+    }
+
+  }
+  .shiyong-icon{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 1.06rem;
+    height: 1.06rem;
+    &.guoqi{
+      background: url("./img/img_out_21.png") left top no-repeat;
+      background-size: cover;
+    }
+    &.shiyong{
+      background: url("./img/img_out_22.png") left top no-repeat;
+      background-size: cover;
+    }
+  }
+
+}
+.more-icon{
+  width: .2rem;
+  height: .5rem;
+  display: inline-block;
+  position: absolute;
+  right: .3rem;
+  top: 0;
+  background: url("./img/fold.png") center no-repeat;
+  background-size:.19rem .09rem ;
+  &.active{
+    background: url("./img/unfold.png") center no-repeat;
+    background-size:.19rem .09rem ;
+  }
+}
+.img-received{
+   width:  1.28rem;
+   height: 0.86rem;
+  position: absolute;
+  right: .2rem;
+  top: 0.06rem;
+  z-index: 1;
+}
+.gone{
+  background: #ddd !important;
+  border: none !important;
+}
+.mid-alin{
+  vertical-align: middle;
+}

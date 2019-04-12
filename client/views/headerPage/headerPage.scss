@@ -1,0 +1,50 @@
+@import "../../assets/styles/base.css";
+.headerPageBox{
+  padding-top: 40px;
+  position: relative;
+  .leaderBox{
+    background: #FFFAE4;
+    padding: .2rem;
+    color: #FF3C48;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    .rt{
+      position: absolute;
+      right: .2rem;
+      top: .22rem;
+      border-radius: 10px;
+      -moz-border-radius: 10px;
+      color: #FC950C;
+      border: 1px solid #FC950C;
+      padding: 0 5px;
+      font-size: 0.24rem;
+    }
+  }
+  .buttonWrap{
+    //position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: .48rem;
+    /deep/ .btn{
+      height: .6rem;
+      line-height: .6rem;
+      float: left;
+      width: 50%;
+      text-align: center;
+      &.btn-success{
+        background-color: #00bcd4;
+        color: white;
+      }
+      &.btn-danger{
+        background-color: red;
+        color: #666666;
+      }
+      &.br{
+        border-right: 1px solid #dedede;
+      }
+    }
+  }
+}
