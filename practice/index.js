@@ -3,7 +3,7 @@
 //import './data-bing'
 //import './computed'
 //import './directive'
-//import './component/index.js'
+import './component/index.js'
 //import './component/extend'
 //import './component/extend2'
 //import './component/parent'
@@ -12,5 +12,5 @@
 //import './component/slot'
 //import './component/parent'
 //import './component/parent2'
-import './component/render'
+// import './component/render'
 

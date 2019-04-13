@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Props from './Props.vue'
 
 const component = {
   template:`<div>This is a componet</div>`
@@ -6,7 +7,7 @@ const component = {
 
 const component2 = {
   template:`
-    <div style="border: 1px solid #ccc; margin-bottom: 10px;">
+    <div style="border: 1px solid red; margin-bottom: 10px;">
       <p>This is a other componet</p>
       <input type="text" v-model="text" v-show="active">
       <p @click="toParent">{{propOne}}</p>
@@ -68,11 +69,24 @@ new Vue({
       <comp-two ref="testComp"   :prop-one="prop1" @change="handleChange" :obj="pObj"></comp-two>
       <comp-two  :prop-one="prop1" @change="handleChange" :obj="pObj"></comp-two>
       <p>{{prop1}}</p>
+      <Props
+          name="Hello Vue！"
+          :type="type"
+          :is-visible="false"
+          :on-change="handlePropChange"
+          title="属性Demo"
+          :class="['test2']"
+          class="test1"
+          :style="{ marginTop: '20px' }"
+          style="margin-top: 10px"
+          :propE="propE"
+        />
     </div>
 `,
   /* 注册组件的方式二 ，用components在需要的文件里面注册组件，就可以使用组件的实例了*/
   components:{
-    CompTwo: component2
+    CompTwo: component2,
+    Props
   },
   data() {
     return {
@@ -80,13 +94,18 @@ new Vue({
       pObj:{
         a:'hello',
         b:'world'
-      }
+      },
+      type: "success",
+      propE:{name:'ssx'}
     }
   },
   methods: {
     handleChange: function () {
       this.prop1 = this.prop1+'222'
-    }
+    },
+    handlePropChange(val) {
+      this.type = val;
+    },
   },
   mounted(){
     console.log("this.$refs.testComp",this.$refs.testComp);
