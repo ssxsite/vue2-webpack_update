@@ -1,5 +1,5 @@
 /*
-  定义一个模板组件，组件里面的内容可以根据需求来给
+  本demo演示Vue2.5之前的slot写法
 * */
 import  Vue from 'vue'
 
@@ -27,7 +27,7 @@ const  comp1 = {
         height:'150px',
         border: '1px solid red'
       },
-      val1: 'liu lili111',
+      val1: 'liu lili',
       val2: 'xiaoli'
     }
   }

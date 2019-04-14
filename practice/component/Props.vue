@@ -17,6 +17,7 @@
 <script>
 export default {
   name: "PropsDemo",
+  /* 如果不想让未定义属性加载在根元素上，inheritAttrs设置为false即可*/
   // inheritAttrs: false,
   /* 这样写props不好，可读性差，不方便后期维护 */
   // props: ['name', 'type', 'list', 'isVisible'],
@@ -53,7 +54,6 @@ export default {
     handleClick() {
       // 不要这么做、不要这么做、不要这么做
       // this.type = "warning";
-
       // 可以，还可以更好
       this.onChange(this.type === "success" ? "warning" : "success");
     }

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Props from './Props.vue'
+import Event from './Event.vue'
 
 const component = {
   template:`<div>This is a componet</div>`
@@ -80,13 +81,17 @@ new Vue({
           :style="{ marginTop: '20px' }"
           style="margin-top: 10px"
           :propE="propE"
+          haha="ssx"
+          @click="test"
         />
+      <Event :name="name" @change="handleEventChange" />
     </div>
 `,
   /* 注册组件的方式二 ，用components在需要的文件里面注册组件，就可以使用组件的实例了*/
   components:{
     CompTwo: component2,
-    Props
+    Props,
+    Event
   },
   data() {
     return {
@@ -96,7 +101,8 @@ new Vue({
         b:'world'
       },
       type: "success",
-      propE:{name:'ssx'}
+      propE:{name:'ssx'},
+      name: "11"
     }
   },
   methods: {
@@ -105,6 +111,13 @@ new Vue({
     },
     handlePropChange(val) {
       this.type = val;
+    },
+    test(){
+      console.log(111)
+    },
+    handleEventChange(val) {
+      console.log(val)
+      this.name = val;
     },
   },
   mounted(){
