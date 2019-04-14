@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Props from './Props.vue'
 import Event from './Event.vue'
+import BigProps from './BigProps.vue'
 
 const component = {
   template:`<div>This is a componet</div>`
@@ -82,16 +83,20 @@ new Vue({
           style="margin-top: 10px"
           :propE="propE"
           haha="ssx"
-          @click="test"
+          @click="handlePropChangeTwo"
         />
+       <hr>
       <Event :name="name" @change="handleEventChange" />
+      <hr>
+      <BigProps :name="name" :on-change="handlePropChangeTwo" :slotDefault="getDefault()"  :slot-title="getTitle()" :slot-scope-item="getItem"/>
     </div>
 `,
   /* 注册组件的方式二 ，用components在需要的文件里面注册组件，就可以使用组件的实例了*/
   components:{
     CompTwo: component2,
     Props,
-    Event
+    Event,
+    BigProps
   },
   data() {
     return {
@@ -112,13 +117,27 @@ new Vue({
     handlePropChange(val) {
       this.type = val;
     },
-    test(){
-      console.log(111)
+    handlePropChangeTwo(val){
+      this.name = val;
     },
     handleEventChange(val) {
       console.log(val)
       this.name = val;
     },
+    getDefault() {
+      return [this.$createElement("p", "default slot")];
+    },
+    getTitle() {
+      return [
+        this.$createElement("p", "title slot1"),
+        this.$createElement("p", "title slot2")
+      ];
+    },
+    getItem(props) {
+      return [
+        this.$createElement("p", `item slot-scope ${JSON.stringify(props)}`)
+      ];
+    }
   },
   mounted(){
     console.log("this.$refs.testComp",this.$refs.testComp);

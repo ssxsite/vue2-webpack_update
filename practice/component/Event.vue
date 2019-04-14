@@ -16,11 +16,16 @@
 export default {
   name: "EventDemo",
   props: {
-    name: String
+    name: String,
+    // testChange:{
+    //   type:Function,
+    //   default:() =>{}
+    // }
   },
   methods: {
     handleChange(e) {
       this.$emit("change", e.target.value);
+      // this.testChange(e.target.value)
     },
     handleDivClick() {
       this.$emit("change", "");
