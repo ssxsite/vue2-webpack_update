@@ -5,6 +5,10 @@
 import  Vue from 'vue'
 
 const comp = {
+  model:{
+    prop:'initValue',
+    event:'input' //默认是input事件,如果想监听change，可以改这里
+  },
   props:['initValue'],
   data(){
     return{
@@ -61,7 +65,7 @@ new Vue({
   },
   template:`
     <div>
-      <comp  :initValue="initVal"   v-model="initVal" ></comp>
+      <comp v-model="initVal" ></comp>
       <p>{{initVal}}</p>
     </div>
   `
