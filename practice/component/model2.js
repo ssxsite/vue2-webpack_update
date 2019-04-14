@@ -1,6 +1,6 @@
 /*
  v-model 实际是vue帮我们实现了双向绑定
- v-model 只能传入一个值，所以如有多个数据，只能传入对象
+ v-model 只能传入一个值，所以如有多个数据，可以传入对象
 * */
 
 import  Vue from 'vue'

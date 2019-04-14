@@ -30,25 +30,6 @@ const comp = {
 
 
 /* 双先绑定方式1*/
-new Vue({
-  el: '#root',
-  components:{
-    comp
-  },
-  data(){
-    return {
-      initVal:'111'
-    }
-  },
-  template:`
-    <div>
-      <comp :initValue="initVal" @input="initVal = arguments[0]"></comp>
-      <p>{{initVal}}</p>
-    </div>
-  `
-})
-
-/* 双先绑定方式2*/
 // new Vue({
 //   el: '#root',
 //   components:{
@@ -61,8 +42,27 @@ new Vue({
 //   },
 //   template:`
 //     <div>
-//       <comp  :initValue="initVal"   v-model="initVal" ></comp>
+//       <comp :initValue="initVal" @input="initVal = arguments[0]"></comp>
 //       <p>{{initVal}}</p>
 //     </div>
 //   `
 // })
+
+/* 双先绑定方式2*/
+new Vue({
+  el: '#root',
+  components:{
+    comp
+  },
+  data(){
+    return {
+      initVal:'111'
+    }
+  },
+  template:`
+    <div>
+      <comp  :initValue="initVal"   v-model="initVal" ></comp>
+      <p>{{initVal}}</p>
+    </div>
+  `
+})
