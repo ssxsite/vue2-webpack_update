@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Props from './Props.vue'
 import Event from './Event.vue'
 import BigProps from './BigProps.vue'
+import PropsAndData from './PropsAndData.vue'
 
 const component = {
   template:`<div>This is a componet</div>`
@@ -88,7 +89,10 @@ new Vue({
        <hr>
       <Event :name="name" @change="handleEventChange" />
       <hr>
-      <BigProps :name="name" :on-change="handlePropChangeTwo" :slotDefault="getDefault()"  :slot-title="getTitle()" :slot-scope-item="getItem"/>
+      <BigProps :name="name" :on-change="handlePropChangeTwo" :slotDefault="getDefault()"  :slot-title="getTitle()" :slot-scope-item="getItem" />
+      <hr>
+      <PropsAndData :info="info" :name="name" />
+      <button @click="handleInfoChange">修改info</button>
     </div>
 `,
   /* 注册组件的方式二 ，用components在需要的文件里面注册组件，就可以使用组件的实例了*/
@@ -96,7 +100,8 @@ new Vue({
     CompTwo: component2,
     Props,
     Event,
-    BigProps
+    BigProps,
+    PropsAndData
   },
   data() {
     return {
@@ -107,7 +112,9 @@ new Vue({
       },
       type: "success",
       propE:{name:'ssx'},
-      name: "11"
+      name: "11",
+      info:{},
+      list:[]
     }
   },
   methods: {
@@ -137,6 +144,11 @@ new Vue({
       return [
         this.$createElement("p", `item slot-scope ${JSON.stringify(props)}`)
       ];
+    },
+    handleInfoChange(){
+      this.info.number = 1;
+      // this.$set(this.info, 'number', 1)
+      console.log("this.info 发生了变化，但是并没有触发子组件更新", this.info);
     }
   },
   mounted(){
