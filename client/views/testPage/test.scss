@@ -256,3 +256,28 @@
 
 }
 
+.item{
+  display: flex;
+  box-sizing: border-box;
+  align-items: center; //水平方向居中
+  padding: 0 20px 20px 20px;
+  .icon{
+    flex: 0 0 60px;
+    width: 60px;
+    padding-right: 20px;
+  }
+  .text{
+    display: flex;
+    flex-direction: column ; //纵向排列
+    justify-content: center;  //垂直居中
+    flex: 1;
+    line-height: 20px;
+    overflow: hidden;
+  }
+  .name{
+    margin-bottom: 10px;
+  }
+}
+
+
+

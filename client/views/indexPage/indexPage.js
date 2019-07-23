@@ -79,15 +79,20 @@ export default {
       swiperImgs:[
         {
           id:0,
-          imgUrl:'https://youimg1.c-ctrip.com/target/100q0w000000kcoz4CCF7_R_640_10000_Q90.jpg'
+          imgUrl:'/client/assets/img/indexPage/banner1-web.jpg',
+          // imgUrl:'/client/assets/img/indexPage/banner1.jpg',
+          // imgUrl:'/client/assets/img/icon09.png'
+          // imgUrl:'https://youimg1.c-ctrip.com/target/100t0w000000kbgd0AB22_R_640_10000_Q90.jpg'
         },
         {
           id:1,
-          imgUrl:'https://youimg1.c-ctrip.com/target/100t0w000000kbgd0AB22_R_640_10000_Q90.jpg'
+          imgUrl:'/client/assets/img/indexPage/banner2-web.jpg',
+          // imgUrl:'/client/assets/img/indexPage/banner2.jpg',
         },
         {
           id:2,
-          imgUrl:'https://youimg1.c-ctrip.com/target/100k0w000000kfl2d7260_R_640_10000_Q90.jpg'
+          imgUrl:'/client/assets/img/indexPage/banner3-web.jpg',
+          // imgUrl:'/client/assets/img/indexPage/banner3.jpg',
         },
       ],
       swiperImgs2:[

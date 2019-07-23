@@ -2,6 +2,7 @@ import {mixinTest1} from '../../assets/js/mixin';
 import {extendTest1} from '../../assets/js/extend.js';
 import testComTwo from '../../common/components/testComTwo/testComTwo.vue'
 import testInput from './components/input.vue'
+import testData from './data'
 export default {
   name: "test",
   components : {
@@ -40,7 +41,8 @@ export default {
       msg2: '',
       msg3: '',
       titles:[],
-      tempVal:0
+      tempVal:0,
+      discList:[]
     }
   },
   methods: {
@@ -109,6 +111,8 @@ export default {
   },
   mounted : function(){
     console.log("leftList--",this.leftList)
+
+    this.discList = testData.data.list
   },
 
 }

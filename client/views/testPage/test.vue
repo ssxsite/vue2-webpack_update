@@ -115,6 +115,18 @@
     <br>
     <br>
     <p>{{tempVal}}</p>
+    <br>
+    <ul>
+      <li  v-for="(item, index) in discList" :key="index" class="item">
+        <div class="icon">
+          <img v-lazy="item.imgurl" width="60" height="60">
+        </div>
+        <div class="text">
+          <h2 class="name" v-html="item.creator.name"></h2>
+          <p class="desc" v-html="item.dissname"></p>
+        </div>
+      </li>
+    </ul>
   </div>
 
 </template>

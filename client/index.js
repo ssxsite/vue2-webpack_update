@@ -12,6 +12,9 @@ import 'swiper/dist/css/swiper.css'
 import {Ajax} from "./service/httpService.js"
 
 import createRouter from './router'
+import lazyLoadingPlucgin from './directive/lazy-loading'
+
+const  defaultImg = require('./assets/img/default.png')
 
 const router = createRouter()
 
@@ -31,4 +34,6 @@ new Vue({
     return createElement(App)
   }
 }).$mount(root)
+
+Vue.use(lazyLoadingPlucgin, {loading: defaultImg})
 
