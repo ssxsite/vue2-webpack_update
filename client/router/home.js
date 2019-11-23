@@ -23,6 +23,7 @@ import personUserInfoPage from '../views/personPage/userInfo/userInfo.vue'
 import personUserInfoNicPage from '../views/personPage/userInfo/nicheng/nicheng.vue'
 import personUserInfoXingBiePage from '../views/personPage/userInfo/xingbie/xingbie.vue'
 import testPage from '../views/testPage/test.vue'
+import vuiTestPage from '../views/vuiTest/test'
 import redPacketPage from '../views/personPage/red-packet/redPacket.vue'
 import notFoundComponent from '../common/components/notFoundComponent/notFoundComponent.vue'
 export default [
@@ -171,6 +172,11 @@ export default [
     path: '/test',
     name:'test',
     component:testPage
+  },
+  {
+    path: '/vui-test',
+    name:'vui-test',
+    component:vuiTestPage
   },
   {
     path: '/redPacket',

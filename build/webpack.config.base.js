@@ -2,7 +2,17 @@ const path = require('path');
 const vueLoader = require('./vue-loader.config')
 const isDev = process.env.NODE_ENV === 'development'
 
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 
+function vui(dir){
+  return resolve('../web_vui_oa/' + dir);
+}
+
+function resource(dir){
+  return vui('src/' + dir);
+}
 
 const config = {
     target: 'web',
@@ -17,6 +27,7 @@ const config = {
       'vue$':'vue/dist/vue.esm.js',
       '@': '../client',
       'base':'../client/base',
+      'components' : resource('components')
     }
   },
   module: {       // 配置加载资源
